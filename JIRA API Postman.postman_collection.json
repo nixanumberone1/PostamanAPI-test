@@ -1,0 +1,1274 @@
+{
+	"info": {
+		"_postman_id": "f5f810c7-8ace-439f-9483-d9a86eaf2d40",
+		"name": "JIRA API Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21084475"
+	},
+	"item": [
+		{
+			"name": "ResponseCodeAutomation",
+			"item": [
+				{
+					"name": "GET projects Features 200 OK",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.clear();\r",
+									"console.log(pm.globals.get(\"test_url\"));\r",
+									"\r",
+									"var name ='test';\r",
+									"console.log(name);\r",
+									"var age =25;\r",
+									"console.log(age);\r",
+									"var isvisible = true;\r",
+									"console.log(isvisible);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/project/10000/features",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"project",
+								"10000",
+								"features"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "issueTypes",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET projects Features 401 Unauthorized",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.clear();\r",
+									"console.log(pm.globals.get(\"test_url\"));\r",
+									"\r",
+									"var name ='test';\r",
+									"console.log(name);\r",
+									"var age =25;\r",
+									"console.log(age);\r",
+									"var isvisible = true;\r",
+									"console.log(isvisible);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/project/10000/features",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"project",
+								"10000",
+								"features"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "issueTypes",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET projects Features 400 Bad request",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.clear();\r",
+									"console.log(pm.globals.get(\"test_url\"));\r",
+									"\r",
+									"var name ='test';\r",
+									"console.log(name);\r",
+									"var age =25;\r",
+									"console.log(age);\r",
+									"var isvisible = true;\r",
+									"console.log(isvisible);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true,
+							"host": true,
+							"accept": true,
+							"accept-encoding": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/project/10000/features",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"project",
+								"10000",
+								"features"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "issueTypes",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ValidateResdponseJSONValues",
+			"item": [
+				{
+					"name": "GET projects Features JSON respone value validation",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Validate JSON value in response\", function () {\r",
+									"\r",
+									"   console.log (response);\r",
+									"   pm.expect(response.features[0].projectId).to.eql(10000);\r",
+									"   pm.expect(response.features[0].state).to.be.a(\"string\");\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Validate JSON Data type\",()=> {\r",
+									" pm.expect(response.features[0].projectId).to.be.a(\"number\");\r",
+									"\r",
+									"\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/project/10000/features",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"project",
+								"10000",
+								"features"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "issueTypes",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create an issue in a project",
+			"item": [
+				{
+					"name": "GET projects",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"console.clear();\r",
+									"console.log(pm.globals.get(\"test_url\"));\r",
+									"\r",
+									"var name ='test';\r",
+									"console.log(name);\r",
+									"var age =25;\r",
+									"console.log(age);\r",
+									"var isvisible = true;\r",
+									"console.log(isvisible);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"test validation\", function () {\r",
+									"    let jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.maxResults).to.eql(50);\r",
+									"});\r",
+									"\r",
+									"//console.log(pm.response.text());\r",
+									"\r",
+									" let jsonData = pm.response.json();\r",
+									"console.log (jsonData.values[0].avatarUrls);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/project/search",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"project",
+								"search"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "issueTypes",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET issue types",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"const student = {studentName: 'John', age: 16, year:10};\r",
+									"console.log (student.studentName);\r",
+									"console.log(student[\"age\"] );\r",
+									"\r",
+									"let studentjson=JSON.stringify(student);\r",
+									"console.log (studentjson);\r",
+									"let studentparse=JSON.parse(studentjson);\r",
+									"console.log(studentparse);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/issuetype/project?projectId={{projectID}}",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"issuetype",
+								"project"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "{{projectID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET users assignable to project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response= pm.response.json();\r",
+									"console.log (response[0].accountId);\r",
+									"\r",
+									"pm.collectionVariables.set('Users',response[0].accountId);\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/user/assignable/multiProjectSearch?projectKeys=SCRUM",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"user",
+								"assignable",
+								"multiProjectSearch"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "query",
+									"disabled": true
+								},
+								{
+									"key": "projectKeys",
+									"value": "SCRUM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create an Issue",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fields\": {\r\n        \"issuetype\": {\r\n            \"id\": \"{{IssueID}}\"\r\n        },\r\n        \"project\": {\r\n            \"id\": \"{{projectID}}\"\r\n        },\r\n        \"reporter\": {\r\n            \"id\": \"{{Users}}\"\r\n        },\r\n        \"summary\": \"New User story\"\r\n    },\r\n    \"update\": {}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/issue",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"issue"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "query",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Main JIRA cases",
+			"item": [
+				{
+					"name": "GET issue types Story variable",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response= pm.response.json();\r",
+									"console.log (response[2].id);\r",
+									"\r",
+									"pm.collectionVariables.set('IssueID',response[2].id);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "{{Username}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/issuetype/project?projectId={{projectID}}",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"issuetype",
+								"project"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "{{projectID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JIRA GET workflows and token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/workflow",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"workflow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET projects Project id variable",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"console.log(response.values[0]);\r",
+									"\r",
+									"//const issueTypes = response.map((value) => value.name);\r",
+									"//pm.collectionVariables.set('issueTypeIDMap',response[issueTypes.indexOf('Sub-task')].description);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/project/search",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"project",
+								"search"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "issueTypes",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET issue types js arrays",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const student = [\r",
+									"{\r",
+									"    studentName: 'John',\r",
+									" age: 16,\r",
+									"  year:10,\r",
+									"  subjects: ['English','Hindi', 'Math']   \r",
+									"  },\r",
+									"\r",
+									"  {\r",
+									"    studentName: 'Ante',\r",
+									"  age: 18,\r",
+									"  year:11},\r",
+									"\r",
+									"  {\r",
+									"    studentName: 'Ivan',\r",
+									"  age: 20,\r",
+									"  year:12}\r",
+									"  \r",
+									"  ];\r",
+									"\r",
+									"  console.log(student[0].subjects[1]);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/issuetype/project?projectId=10000",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"issuetype",
+								"project"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "10000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET issue types js arrays Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"function addition(a, b) {  \r",
+									"return a + b; \r",
+									"}\r",
+									"\r",
+									"console.log (addition(10, 15));"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/issuetype/project?projectId=10000",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"issuetype",
+								"project"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "10000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Issue",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/issue/:issueIdOrKey",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"issue",
+								":issueIdOrKey"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "query",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "issueIdOrKey",
+									"value": "10001"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "E2E test Optimized",
+			"item": [
+				{
+					"name": "GET projects Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"console.log(response.values[0]);\r",
+									"let projectDetails = response.values;\r",
+									"\r",
+									"\r",
+									"const Projectnames = projectDetails.map((projectname) => projectname.name);\r",
+									"\r",
+									"console.log(Projectnames);\r",
+									"\r",
+									"pm.collectionVariables.set('ProjectIDMap',projectDetails[Projectnames.indexOf('Test project')].id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{JIRA API token}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "nixanumberone@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{Hostname for my JIRA}}/rest/api/3/project/search",
+							"host": [
+								"{{Hostname for my JIRA}}"
+							],
+							"path": [
+								"rest",
+								"api",
+								"3",
+								"project",
+								"search"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "issueTypes",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "JIRA API token",
+			"value": "ATATT3xFfGF0Vzkvvrhkvm2_CFWBWEeH-hvjpkIdshaPZ0SJ_QoUU63QkxApv2RWcW7I0ZlxMljcE8qBwI7ddFd2Y7JNOxBsMzL8GYzPvOEL4bj4t5Y79QbyTPP_8hA7B7Q7zKA8Blmma7MQw_lv_PD5FoDZpLl8owuon26E9I1b8oYEu9VDMMo=746FF48F"
+		},
+		{
+			"key": "Hostname for my JIRA",
+			"value": "https://nixanimberone.atlassian.net"
+		},
+		{
+			"key": "projectID",
+			"value": ""
+		},
+		{
+			"key": "IssueID",
+			"value": ""
+		},
+		{
+			"key": "Users",
+			"value": ""
+		},
+		{
+			"key": "ProjectIDMap",
+			"value": ""
+		}
+	]
+}
